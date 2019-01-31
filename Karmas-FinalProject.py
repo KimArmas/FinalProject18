@@ -1,20 +1,5 @@
 import random
 import time
-#checking where the game is being played
-onlineVS = input("Are you playing online (1) or through the desktop (2)? ")
-if onlineVS == "1":
-  online = True
-elif onlineVS == "2":
-  online = False
-#having different modules and clear function for online vs desktop
-if online == False:
-  import keyboard, os
-  def clear():
-    os.system('cls')
-elif online == True:
-  import replit
-  def clear():
-    replit.clear()
 
 #what happens if you win
 def victory():
@@ -41,14 +26,12 @@ def death_inti():
 #door open graphics to make it easier
 def doorOpen():
   input("Press Enter to advance to the door...")
-  clear()
   print("""
     |          |
     |          |
     |__________|
     """)
   time.sleep(2)
-  clear()
   print("""
     |          |
     |          |
@@ -140,7 +123,6 @@ def fifth_barrier():
 def fourth_barrier():
   #introducing the dancing game
   print("A now-familiar thud sounds behind you after you step through. You don't see anybody in this room, and are confused. Was this the end? A bit of movement catches your eye. On the wall is a little dancing picture. A voice sounds, and you soon realize it's coming from the figure on the wall itself. This has been a strange day, but this was definitely the most surreal thing you had experienced\n")
-  clear()
   print("""
 
       o
@@ -190,8 +172,7 @@ def fourth_barrier():
   streak = 0
   score = 0
   #main while loop of the game
-  while n < 6:
-    clear()
+  while n < 6 :
     print("""
 
        o
@@ -199,15 +180,13 @@ def fourth_barrier():
       / \\
       """)
     time.sleep(0.3)
-    clear()
-    print("""
 
+    print("""
        o
       <|\\
       / \\
       """)
     time.sleep(0.3)
-    clear()
     print("""
 
        o
@@ -215,7 +194,6 @@ def fourth_barrier():
       / \\
       """)
     time.sleep(0.3)
-    clear()
     print("""
 
        o
@@ -224,7 +202,6 @@ def fourth_barrier():
       """)
     print("I'm warmed up, get ready!")
     time.sleep(2)
-    clear()
     move = keys[random.randint(0,4)]
     print (move)
     #giving people 10 seconds to select a move
@@ -245,7 +222,6 @@ def fourth_barrier():
         streak = 0
         break
       n+=1
-  clear()
   if score > 30:
     print("Nice dancing! I guess no burning for you this time!")
     doorOpen()
@@ -561,8 +537,7 @@ def first_barrier():
   #set limit of amount of tries
   while wrong < max_ and sofar != secret_word:
     print()
-    #print hangman graphics
-    clear()
+    #print hangman graphic
     print(hangman[wrong])
     #shows user how many letters are left to guess
     print(f"The secret word so far: {sofar}")
@@ -613,7 +588,6 @@ def first_barrier():
     print()
     #unlocking the door
     input("Press Enter to reach the door...")
-    clear()
     print("""
   |          |
   |          |
@@ -621,7 +595,6 @@ def first_barrier():
   """)
     print(f"{username} put in 'Inti' as the code")
     time.sleep(3)
-    clear()
     print("""
   |          |
   |          |
